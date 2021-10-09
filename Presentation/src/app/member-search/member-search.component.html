@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <div class="info-form">
+                <form>
+                    <div class="form-group">
+                        <label for="txtSearch">Policy Number or Member Card Number</label>
+                        <input #txtSearch type="text" class="form-control" aria-describedby="idHelp" (input)="search(txtSearch.value)" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let member of members$ | async">
+                <th scope="row">{{member.id}}</th>
+                <td>{{member.firstName}}</td>
+                <td>{{ member.lastName}}</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" routerLink="/detail/{{member.id}}">View</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <ul class="search-result">
+    <li *ngFor="let member of members$ | async">
+        <a routerLink="/detail/{{member.id}}">
+        {{member.firstName}} {{ member.lastName}}
+      </a>
+    </li>
+</ul> -->

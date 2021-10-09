@@ -1,0 +1,31 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #007db9 !important;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+
+/* 
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    background: #42A5F5;
+    color: white;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+.footer {
+    height: 50px;
+    margin-top: -50px;
+} */
